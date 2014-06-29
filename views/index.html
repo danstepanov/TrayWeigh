@@ -12,7 +12,7 @@
 				</div> -->
 				<div class="nav-tab nav-mid">
 					<h1>
-						find food
+						find ingredients
 					</h1>
 				</div>
 				<div class="nav-tab nav-right">
@@ -27,15 +27,42 @@
 				<!-- <div class="col col-left"></div> -->
 				<div class="col col-mid">
 					<div class="search-box">
-						<input placeholder="search for food" class="search-input" type="textbox">
-						<div class="search-icon"></div>
+						<input id="search-textbox" placeholder="search for ingredient" class="search-input" type="textbox">
+						<div id="search-button" class="search-icon"></div>
 					</div>
 					<div class="search-results">
-						<div class="search-result searching">
-							searching...
-						</div>
 						<div class="search-result add-new">
-
+							<div class="add-row">
+								<h3>Add Custom</h3>
+								<div class="plus">+</div>
+							</div>
+							<div class="add-input-row hide">
+								<input class="name add-input" type="textbox" placeholder="name">
+							</div>
+							<div class="add-input-row hide">
+								<input class="serving add-input" type="textbox" placeholder="serving weight in grams">
+							</div>
+							<div class="add-input-row hide">
+								<input class="calories add-input" type="textbox" placeholder="calories">
+							</div>
+							<div class="add-input-row hide">
+								<input class="sodium add-input" type="textbox" placeholder="sodium in mg">
+							</div>
+							<div class="add-input-row hide">
+								<input class="carbs add-input" type="textbox" placeholder="carbs in g">
+							</div>
+							<div class="add-input-row hide">
+								<input class="sugar add-input" type="textbox" placeholder="sugar in g">
+							</div>
+							<div class="add-input-row hide">
+								<input class="protein add-input" type="textbox" placeholder="protein in g">
+							</div>
+							<div class="add-input-row hide">
+								<input class="fat add-input" type="textbox" placeholder="fat in g">
+							</div>
+							<div class="add-input-row add-submit hide">
+								add ingredient
+							</div>
 						</div>
 						<div class="result search-result">
 							<div class="description">
@@ -45,14 +72,31 @@
 								</div>
 								<div class="plus">+</div>
 							</div>
-							<div class="nutritional-info">
-								<div class="row-one"></div>
-								<div class="row-two"></div>
-							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col col-right"></div>
+				<div class="col col-right">
+					<div class="tray-name form-box">
+						<input class="text-input" type="textbox">
+					</div>
+					<div class="tray-num form-box">
+						<input class="text-input" type="textbox">
+					</div>
+					<div class="ingredients form-box">
+						<div class="ingredient">
+							<div class="ingredient-row title">
+								foodtitle
+							</div>
+							<div class="ingredient-row ingredient-amount">
+								<input class="ingredient-input" type="textbox">
+								<div class="minus"></div>
+							</div>
+						</div>
+					</div>
+					<div class="add-tray form-box">
+						submit
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src='js/jquery.js'></script>

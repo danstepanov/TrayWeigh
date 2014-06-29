@@ -67,23 +67,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 body, html {
   width: 100%;
   height: 100%;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 html, input {
   font-family: 'Open Sans';
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 h1 {
   color: white;
   vertical-align: middle;
@@ -93,7 +93,7 @@ h1 {
   font-family: "montserrat";
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 h2 {
   color: white;
   vertical-align: middle;
@@ -103,82 +103,88 @@ h2 {
   font-family: "montserrat";
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .nav-tab {
   padding: 0 10px;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .main, .nav {
   width: 100%;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .main-container, .nav-container {
   height: 100%;
   margin: auto;
   width: 100%;
 }
-/* line 60, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .main-container > div, .nav-container > div {
   float: left;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .nav {
   height: 60px;
   background-color: #82aacf;
   border-bottom: solid 4px #6a99c6;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .nav-left {
   width: 25%;
   border-right: solid 1px #5189bc;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .nav-mid {
   width: 65%;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .nav-right {
   border-left: solid 1px #5189bc;
   width: 35%;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .nav-tab {
   height: 100%;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .main {
   height: 100%;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .col {
   height: 100%;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .col-left {
   width: 25%;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .col-mid {
   width: 65%;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .col-right {
   width: 35%;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
+.search-results {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* line 127, ../sass/screen.scss */
 .search-box {
   background-color: #eee;
   height: 50px;
@@ -187,13 +193,13 @@ h2 {
   padding: 0 5%;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .search-input:focus {
   color: #6a99c6;
   border-bottom: solid 2px #6a99c6;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .search-input {
   background: none;
   border-top: none;
@@ -209,7 +215,7 @@ h2 {
   padding-left: 10px;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 .search-icon {
   width: 24px;
   height: 24px;
@@ -219,51 +225,51 @@ h2 {
   display: inline-block;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .search-icon:not(.focus) {
   background-image: url("/images/search-light.png");
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .search-icon.focus {
   background-image: url("/images/search-blue.png");
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .result {
   padding-top: 10px;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .description > * {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .description {
   line-height: 2em;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .title-box {
   padding-left: 10%;
   width: 80%;
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 .title-box > * {
   display: inline;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 h3 {
   font-size: 2em;
   font-weight: 200;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 label {
   font-size: .75em;
   color: #999;
@@ -271,15 +277,15 @@ label {
   vertical-align: top;
 }
 
-/* line 203, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 .plus {
   max-width: 20%;
   font-size: 3em;
   font-weight: bold;
-  color: #cbe39e;
+  color: #99c601;
 }
 
-/* line 210, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .searching {
   line-height: 80px;
   vertical-align: middle;
@@ -290,7 +296,191 @@ label {
   text-align: center;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 .search-result {
   min-height: 80px;
+}
+
+/* line 232, ../sass/screen.scss */
+.add-new {
+  background-color: #f0b593;
+  color: white;
+}
+
+/* line 237, ../sass/screen.scss */
+.add-row {
+  height: 100%;
+}
+/* line 239, ../sass/screen.scss */
+.add-row h3 {
+  display: inline-block;
+  font-weight: bold;
+  width: 80%;
+  line-height: 80px;
+  vertical-align: middle;
+  padding-left: 10%;
+}
+/* line 247, ../sass/screen.scss */
+.add-row .plus {
+  display: inline-block;
+  line-height: 80px;
+  vertical-align: middle;
+  color: white;
+}
+
+/* line 255, ../sass/screen.scss */
+.add-input-row {
+  width: 100%;
+  min-height: 50px;
+}
+
+/* line 260, ../sass/screen.scss */
+.form-box {
+  width: 100%;
+  min-height: 50px;
+}
+
+/* line 265, ../sass/screen.scss */
+.add-tray {
+  text-align: center;
+  background-color: #cbe39e;
+  line-height: 50px;
+  font-size: 1.5em;
+  color: white;
+  vertical-align: middle;
+}
+
+/* line 274, ../sass/screen.scss */
+.text-input {
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  width: 90%;
+  margin: 15px 5%;
+  font-size: 1.25em;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: #89712f;
+  border-bottom: #89712f;
+}
+
+/* line 289, ../sass/screen.scss */
+.text-input:focus {
+  color: #695624;
+  border-bottom: solid 2px #695624;
+}
+
+/* line 294, ../sass/screen.scss */
+.add-input {
+  font-size: 1em;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  width: 90%;
+  margin: 15px 5%;
+  font-size: 1.25em;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: #fff;
+  border-bottom: solid 2px #fff;
+}
+
+/* line 310, ../sass/screen.scss */
+.add-input::-webkit-input-placeholder {
+  color: white;
+}
+
+/* line 314, ../sass/screen.scss */
+.add-input:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+}
+
+/* line 318, ../sass/screen.scss */
+.add-input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+}
+
+/* line 322, ../sass/screen.scss */
+.add-input:-ms-input-placeholder {
+  color: white;
+}
+
+/* line 326, ../sass/screen.scss */
+.add-submit {
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'montserrat';
+}
+
+/* line 333, ../sass/screen.scss */
+.ingredient-row {
+  min-height: 50px;
+  width: 100%;
+}
+
+/* line 338, ../sass/screen.scss */
+.ingredient-row.title {
+  color: #444;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2em;
+}
+
+/* line 348, ../sass/screen.scss */
+.ingredient-input {
+  font-size: 1em;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  width: 70%;
+  margin: 15px 5%;
+  font-size: 1.25em;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: #aaa;
+  border-bottom: solid 2px #aaa;
+  display: inline-block;
+}
+
+/* line 365, ../sass/screen.scss */
+.ingredient-input:focus {
+  color: #444;
+  border-bottom: solid 2px #444;
+}
+
+/* line 370, ../sass/screen.scss */
+.minus {
+  display: inline-block;
+  background-image: url("/images/trash.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+/* line 378, ../sass/screen.scss */
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 383, ../sass/screen.scss */
+.tray-num {
+  background-color: #eee;
+}
+
+/* line 387, ../sass/screen.scss */
+.tray-name {
+  background-color: #f5f2ba;
 }

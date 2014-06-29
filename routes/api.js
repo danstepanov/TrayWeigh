@@ -14,7 +14,6 @@ exports.setDb = function(dbUrl) {
 };
 
 exports.addBeacon = function(req,res) {
-	console.log("beaconid: " + req.params.id);
 	params = {
 		beacon_id: req.params.id,
 		org:"hackathon"
@@ -200,7 +199,7 @@ exports.searchFoods = function(req, res) {
 exports.getRecipe = function(req,res) {
 	var url = "http://platform.fatsecret.com/rest/server.api?"
 
-	url += processRecipe(91,"http://platform.fatsecret.com/rest/server.api", "recipe.get");
+	url += processRecipe(req.params.id,"http://platform.fatsecret.com/rest/server.api", "recipe.get");
 
 	request.get(url, function(error, response, body) {
 		if(error) {
@@ -233,10 +232,11 @@ exports.getRecipe = function(req,res) {
 
 exports.getFood = function(req,res){
 	console.log(req.params.id);
+
 	var url = "http://platform.fatsecret.com/rest/server.api?"
 
-	url += processId(1641,"http://platform.fatsecret.com/rest/server.api", "food.get");
-
+	url += processId(req.params.id,"http://platform.fatsecret.com/rest/server.api", "food.get");
+	console.log(url);
 	request.get(url, function(error, response, body) {
 		if(error) {
 			console.log(error);
