@@ -1,0 +1,224 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+// $primary_blue: #B3EFFF;
+$primary_blue: #82aacf;
+$p_yellow: #f5f2ba;
+$p_green: #cbe39e;
+$p_blue: #99c601;
+$p_orange: #f0b593;
+$p_red: #de7e6a;
+$p_dark_blue:#6a99c6;
+
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+html, input {
+	font-family: 'Open Sans';
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+h1 {
+	color: white;
+	vertical-align: middle;
+	line-height: 60px;
+	font-size: 1.5em;
+	text-align: center;
+	font-family: 'montserrat'
+}
+
+h2 {
+	color: white;
+	vertical-align: middle;
+	line-height: 60px;
+	font-size: 1em;
+	text-align: center;
+	font-family: 'montserrat'
+}
+
+.nav-tab {
+	padding: 0 10px;
+}
+
+.main,.nav {
+	width: 100%;
+}
+
+.main-container, .nav-container {
+	height: 100%;
+	> div {
+		float: left;
+	}
+	margin: auto;
+	// max-width: 800px;
+	width: 100%;
+}
+
+$left-width:25%;
+$mid-width:65%;
+$right-width:35%;
+
+$nav-border: solid 1px scale-lightness($primary_blue, -20);
+
+.nav {
+	height: 60px;
+	background-color: $primary_blue;
+	border-bottom: solid 4px scale-lightness($primary_blue, -10);
+}
+
+.nav-left {
+	width: $left-width;
+	border-right: $nav-border;
+}
+
+.nav-mid {
+	width: $mid-width;
+}
+
+.nav-right {
+	border-left: $nav-border;
+	width: $right-width;
+}
+
+.nav-tab {
+	height: 100%;
+}
+
+.main {
+	height: 100%;
+}
+
+.col {
+	height: 100%;
+}
+
+.col-left {
+	width: $left-width;
+	// background-color: #efefef;
+}
+
+.col-mid {
+	width: $mid-width;
+}
+
+.col-right {
+	width: $right-width;
+}
+
+.search-box {
+	background-color: #eee;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	padding: 0 5%;
+}
+
+.search-input:focus {
+	color: $p_dark_blue;
+	border-bottom: solid 2px $p_dark_blue;
+}
+
+.search-input {
+	background: none;
+	border-top: none;
+	border-left:none;
+	border-right:none;
+	border-bottom: solid 2px #ccc;
+	outline: none;
+	min-width: 80%;
+	width: 300px;
+	color: #999999;
+	font-size: 1.5em;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.search-icon {
+	width: 24px;
+	height: 24px;
+	max-width: 10%;
+	vertical-align: middle;
+	background-size: cover;
+	display: inline-block;
+}
+
+.search-icon:not(.focus) {
+	background-image: url('/images/search-light.png');
+}
+
+.search-icon.focus {
+	background-image: url('/images/search-blue.png');
+}
+
+.result {
+	padding-top: 10px;
+}
+
+.description > * {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.description {
+	line-height: 2em;
+}
+
+.nutritional-info {
+
+}
+
+.title-box {
+	padding-left: 10%;
+	width: 80%;
+}
+
+.title-box > * {
+	display: inline;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 200;
+}
+
+label {
+	font-size: .75em;
+	color: #999;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.plus {
+	max-width: 20%;
+	font-size: 3em;
+	font-weight: bold;
+	color: $p_green;
+}
+
+.searching {
+	line-height: 80px;
+	vertical-align: middle;
+	font-size: 2em;
+	color: #999;
+	background-color: #fafafa;
+	font-weight: bold;
+	text-align: center;
+}
+
+.search-result {
+	min-height: 80px;
+}
+
+

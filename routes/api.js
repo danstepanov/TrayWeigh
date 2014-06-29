@@ -53,6 +53,8 @@ exports.addBeacon = function(req,res) {
 
 exports.addTrayToBeacon = function(req, res) {
 	var tray = {
+		name:"neverland",
+		id:1,
 		calories: 512,
 		sodium: 4,
 		carbs: 100,

@@ -1,0 +1,296 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 17, ../sass/screen.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 22, ../sass/screen.scss */
+html, input {
+  font-family: 'Open Sans';
+}
+
+/* line 26, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 32, ../sass/screen.scss */
+h1 {
+  color: white;
+  vertical-align: middle;
+  line-height: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "montserrat";
+}
+
+/* line 41, ../sass/screen.scss */
+h2 {
+  color: white;
+  vertical-align: middle;
+  line-height: 60px;
+  font-size: 1em;
+  text-align: center;
+  font-family: "montserrat";
+}
+
+/* line 50, ../sass/screen.scss */
+.nav-tab {
+  padding: 0 10px;
+}
+
+/* line 54, ../sass/screen.scss */
+.main, .nav {
+  width: 100%;
+}
+
+/* line 58, ../sass/screen.scss */
+.main-container, .nav-container {
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+/* line 60, ../sass/screen.scss */
+.main-container > div, .nav-container > div {
+  float: left;
+}
+
+/* line 74, ../sass/screen.scss */
+.nav {
+  height: 60px;
+  background-color: #82aacf;
+  border-bottom: solid 4px #6a99c6;
+}
+
+/* line 80, ../sass/screen.scss */
+.nav-left {
+  width: 25%;
+  border-right: solid 1px #5189bc;
+}
+
+/* line 85, ../sass/screen.scss */
+.nav-mid {
+  width: 65%;
+}
+
+/* line 89, ../sass/screen.scss */
+.nav-right {
+  border-left: solid 1px #5189bc;
+  width: 35%;
+}
+
+/* line 94, ../sass/screen.scss */
+.nav-tab {
+  height: 100%;
+}
+
+/* line 98, ../sass/screen.scss */
+.main {
+  height: 100%;
+}
+
+/* line 102, ../sass/screen.scss */
+.col {
+  height: 100%;
+}
+
+/* line 106, ../sass/screen.scss */
+.col-left {
+  width: 25%;
+}
+
+/* line 111, ../sass/screen.scss */
+.col-mid {
+  width: 65%;
+}
+
+/* line 115, ../sass/screen.scss */
+.col-right {
+  width: 35%;
+}
+
+/* line 119, ../sass/screen.scss */
+.search-box {
+  background-color: #eee;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  padding: 0 5%;
+}
+
+/* line 127, ../sass/screen.scss */
+.search-input:focus {
+  color: #6a99c6;
+  border-bottom: solid 2px #6a99c6;
+}
+
+/* line 132, ../sass/screen.scss */
+.search-input {
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px #ccc;
+  outline: none;
+  min-width: 80%;
+  width: 300px;
+  color: #999999;
+  font-size: 1.5em;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+/* line 147, ../sass/screen.scss */
+.search-icon {
+  width: 24px;
+  height: 24px;
+  max-width: 10%;
+  vertical-align: middle;
+  background-size: cover;
+  display: inline-block;
+}
+
+/* line 156, ../sass/screen.scss */
+.search-icon:not(.focus) {
+  background-image: url("/images/search-light.png");
+}
+
+/* line 160, ../sass/screen.scss */
+.search-icon.focus {
+  background-image: url("/images/search-blue.png");
+}
+
+/* line 164, ../sass/screen.scss */
+.result {
+  padding-top: 10px;
+}
+
+/* line 168, ../sass/screen.scss */
+.description > * {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 174, ../sass/screen.scss */
+.description {
+  line-height: 2em;
+}
+
+/* line 182, ../sass/screen.scss */
+.title-box {
+  padding-left: 10%;
+  width: 80%;
+}
+
+/* line 187, ../sass/screen.scss */
+.title-box > * {
+  display: inline;
+}
+
+/* line 191, ../sass/screen.scss */
+h3 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+/* line 196, ../sass/screen.scss */
+label {
+  font-size: .75em;
+  color: #999;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+/* line 203, ../sass/screen.scss */
+.plus {
+  max-width: 20%;
+  font-size: 3em;
+  font-weight: bold;
+  color: #cbe39e;
+}
+
+/* line 210, ../sass/screen.scss */
+.searching {
+  line-height: 80px;
+  vertical-align: middle;
+  font-size: 2em;
+  color: #999;
+  background-color: #fafafa;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 220, ../sass/screen.scss */
+.search-result {
+  min-height: 80px;
+}

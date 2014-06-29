@@ -1,11 +1,60 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Title</title>
-		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<title>TrayWeigh</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/screen.css">
 	</head>
 	<body>
-		<input id="ingredient-search" type="textbox" />
+		<div class="nav">
+			<div class="nav-container">
+				<!-- <div class="nav-tab nav-left">
+				</div> -->
+				<div class="nav-tab nav-mid">
+					<h1>
+						find food
+					</h1>
+				</div>
+				<div class="nav-tab nav-right">
+					<h2>
+						user (organization)
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-container">
+				<!-- <div class="col col-left"></div> -->
+				<div class="col col-mid">
+					<div class="search-box">
+						<input placeholder="search for food" class="search-input" type="textbox">
+						<div class="search-icon"></div>
+					</div>
+					<div class="search-results">
+						<div class="search-result searching">
+							searching...
+						</div>
+						<div class="search-result add-new">
+
+						</div>
+						<div class="result search-result">
+							<div class="description">
+								<div class="title-box">
+									<h3>Food Title</h3>
+									<label>label</label>
+								</div>
+								<div class="plus">+</div>
+							</div>
+							<div class="nutritional-info">
+								<div class="row-one"></div>
+								<div class="row-two"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-right"></div>
+			</div>
+		</div>
 		<script src='js/jquery.js'></script>
 		<script src='js/app.js'></script>
 	</body>
