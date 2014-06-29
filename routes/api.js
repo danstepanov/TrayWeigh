@@ -77,19 +77,6 @@ exports.getTrayFromBeacon = function(req,res) {
 	});
 };
 
-exports.test = function(req,res) {
-	var oauth = {
-		consumer_key: "571b27a2df6b489f8c36a23ae077b6ad",
-		consumer_secret: "4ea80f61e94241208aab70723ce5169c"
-	};
-
-	request.get({url:"http://platform.fatsecret.com/rest/server.api?" + "oauth_consumer_key=571b27a2df6b489f8c36a23ae077b6ad&oauth_signature_method=HMAC-SHA1&oauth_timestamp=" + (new Date().getTime()) + "&oauth_nonce="+ (Math.floor(Math.random()*1000)) + "oauth_version=1.0&expression=chicken&method=foods.autocomplete&format=json", oauth:oauth},
-		function(error,response,body){
-			console.log(error);
-			console.log(body);
-		});
-}
-
 var fixedEncodeURIComponent = function(str) {
   return encodeURIComponent(str).replace(/[!'()]/g, escape).replace(/\*/g, "%2A");
 }
@@ -201,7 +188,6 @@ exports.searchFoods = function(req, res) {
 			}
 		}
 
-		console.log(foods);
 		res.json({
 			foods: foods
 		});
@@ -209,7 +195,6 @@ exports.searchFoods = function(req, res) {
 };
 
 exports.getRecipe = function(req,res) {
-	console.log(req.params.id);
 	var url = "http://platform.fatsecret.com/rest/server.api?"
 
 	url += processRecipe(91,"http://platform.fatsecret.com/rest/server.api", "recipe.get");
@@ -221,8 +206,6 @@ exports.getRecipe = function(req,res) {
 
 		// console.log(JSON.parse(body));
 		body = JSON.parse(body);
-
-		console.log(body.recipe.ingredients);
 
 		var recipe = {};
 
@@ -275,7 +258,6 @@ exports.getFood = function(req,res){
 		food.sugars = serving.sugar;
 		food.fat = serving.fat; 
 
-		console.log(food);
 	});
 };
 
@@ -300,7 +282,6 @@ exports.searchRecipes = function(req, res) {
 				});
 			}
 		}
-		console.log(recipes);
 		res.json({
 			recipes: recipes
 		});
