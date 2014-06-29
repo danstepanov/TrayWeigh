@@ -124,10 +124,10 @@ exports.searchFoods = function(req, res) {
 	var hash_string = "POST&" + escape("http://platform.fatsecret.com/rest/server.api") + "&" + escape(param_string);
 	console.log(hash_string);
 	var shaObj = new jsSHA(hash_string, "TEXT")
-	var hmac = shaObj.getHMAC("4ea80f61e94241208aab70723ce5169c", "TEXT", "SHA-1", "HEX");
+	var hmac = shaObj.getHMAC("4ea80f61e94241208aab70723ce5169c&", "TEXT", "SHA-1", "HEX");
 	console.log(hmac);
 
-	var request_string = "http://platform.fatsecret.com/rest/server.api?" + param_string + "&oauth_signature=" + hmac;
+	var request_string = "http://platform.fatsecret.com/rest/server.api?" + param_string + "&oauth_signature=" + escape(hmac);
 
 	request.get(request_string, function(error, response, body) {
 		if(error) {

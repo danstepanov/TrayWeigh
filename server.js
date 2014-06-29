@@ -33,7 +33,7 @@ api.setDb(config.db);
 //webapp routing
 app.get('/', chef.home);
 
-// api.createUser();
+// api.searchFoods();
 
 //api routing
 app.get('/api/post/addbeacon/:id', api.addBeacon);
