@@ -36,7 +36,7 @@ exports.getTrayFromBeacon= function(beaconID, callback) {
 		}
 		else {
 			console.log(result);
-			callback();
+			callback(result);
 		}
 	});
 };

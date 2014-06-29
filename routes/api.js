@@ -74,8 +74,9 @@ exports.addTrayToBeacon = function(req, res) {
 exports.getTrayFromBeacon = function(req,res) {
 	mongo.getTrayFromBeacon({
 		beacon_id: req.params.id
-	}, function(){
+	}, function(result){
 		console.log('got beacon');
+		res.json(result)
 	});
 };
 
