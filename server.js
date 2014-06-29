@@ -33,13 +33,15 @@ api.setDb(config.db);
 //webapp routing
 app.get('/', chef.home);
 
-// api.searchFoods();
-
 //api routing
 app.get('/api/post/addbeacon/:id', api.addBeacon);
 app.get('/api/get/beacon/:id', api.getTrayFromBeacon);
 app.get('/api/post/beacon/:id', api.addTrayToBeacon);
 app.get('/api/get/searchfoods/:searchquery', api.searchFoods);
+app.get('/api/get/searchrecipes/:searchquery', api.searchRecipes);
+app.get('/api/get/food/:id', api.getFood);
+app.get('/api/get/recipe/:id', api.getRecipe);
+
 
 // redirect all others to the index (HTML5 history)
 app.get('*', chef.home);

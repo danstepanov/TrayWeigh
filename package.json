@@ -25,6 +25,8 @@
     "oauth": "~0.9.12",
     "underscore": "~1.6.0",
     "jssha": "~1.5.0",
-    "request": "~2.36.0"
+    "request": "~2.36.0",
+    "querystring": "~0.2.0",
+    "crypto": "0.0.3"
   }
 }
