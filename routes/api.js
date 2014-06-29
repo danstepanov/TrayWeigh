@@ -51,16 +51,18 @@ exports.addBeacon = function(req,res) {
 // };
 
 exports.addTrayToBeacon = function(req, res) {
-	var tray = {
-		name:"neverland",
-		id:1,
-		calories: 512,
-		sodium: 4,
-		carbs: 100,
-		protein: 20,
-		fats: 5,
-		sugars: 30
-	};
+	var tray = JSON.parse(req.params.body);
+	// {
+	// 	name:"neverland",
+	// 	id:5,
+	// 	calories: 512,
+	// 	sodium: 4,
+	// 	carbs: 100,
+	// 	protein: 20,
+	// 	fats: 5,
+	// 	sugars: 30,
+	// 	serving: 500
+	// };
 	var params = {
 		beacon_id: req.params.id,
 		tray: tray
@@ -71,6 +73,7 @@ exports.addTrayToBeacon = function(req, res) {
 };
 
 exports.getTrayFromBeacon = function(req,res) {
+	console.log(req.params.id);
 	mongo.getTrayFromBeacon({
 		beacon_id: req.params.id
 	}, function(result){

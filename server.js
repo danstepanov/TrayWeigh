@@ -34,9 +34,9 @@ api.setDb(config.db);
 app.get('/', chef.home);
 
 //api routing
-app.get('/api/post/addbeacon/:id', api.addBeacon);
+app.post('/api/post/addbeacon/:id', api.addBeacon);
 app.get('/api/get/beacon/:id', api.getTrayFromBeacon);
-app.get('/api/post/beacon/:id', api.addTrayToBeacon);
+app.post('/api/post/beacon/:id/:body', api.addTrayToBeacon);
 app.get('/api/get/searchfoods/:searchquery', api.searchFoods);
 app.get('/api/get/searchrecipes/:searchquery', api.searchRecipes);
 app.get('/api/get/food/:id', api.getFood);

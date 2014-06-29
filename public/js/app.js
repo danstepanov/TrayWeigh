@@ -30,14 +30,13 @@
 	};
 
 	var doPlusAction = function() {
-		console.log($(this));
 		var $parent = $(this).parent();
-		console.log($parent);
 		var $elem = $('.ingredients').append(ingredient_template.replace('foodtitle', $parent.find('h3').text()));
 		var id = $parent.data('id');
-		console.log(id);
+		$('.ingredient:last-child').find('.minus').click(function() {
+			$(this).parent().parent().remove();
+		});
 		$.get('/api/get/food/' + id, function(data) {
-			console.log(status);
 			for(var key in data) {
 				console.log(key +" " + data[key]);
 				$elem.attr("data-" + key,data[key]);
@@ -70,17 +69,20 @@
 			var $parent = $('.add-new');
 
 			var food = {};
-			food.sugar = $parent.find('.sugar').val() || 0;
+			food.sugars = $parent.find('.sugar').val() || 0;
 			food.carbs = $parent.find('.carbs').val() || 0;
-			food.fat = $parent.find('.fat').val() || 0;
+			food.fats = $parent.find('.fat').val() || 0;
 			food.protein = $parent.find('.protein').val() || 0;
 			food.serving = $parent.find('.serving').val() || 0;
 			food.sodium = $parent.find('.sodium').val() || 0;
 			food.calories = $parent.find('.calories').val() || 0;
 
-			var $elem = $('.ingredients').append(ingredient_template.replace('foodtitle', $parent.find('.name').val() || "food"));
+			$('.ingredients').append(ingredient_template.replace('foodtitle', $parent.find('.name').val() || "food"));
+			var $elem = $('.ingredient').last();
+			$elem.find('.minus').click(function() {
+				$(this).parent().parent().remove();
+			});
 			
-			console.log($elem);
 
 			for(var key in food) {
 				console.log(key +" " + food[key]);
@@ -89,7 +91,7 @@
 
 			$('.result').remove();
 
-			$('.add-input-row').val('');
+			$('.add-input-row input').val('');
 			$('.search-results').animate({
 				scrollTop: 0
 			});
@@ -117,10 +119,56 @@
 
 		$('.search-input').focus(function() {
 			$('.search-icon').addClass('focus');
-
+			$('.result').remove();
 		});
 		$('.search-input').blur(function() {
 			$('.search-icon').removeClass('focus');
+		});
+
+		$('.add-tray').click(function() {
+			var tray = {
+				'sugars': 0,
+				'fats' : 0,
+				'protein' : 0,
+				'sodium': 0,
+				'calories' :0,
+				'carbs' : 0,
+				'weight' : 0,
+			};
+
+			tray.name = $('.tray-name input').val();
+			tray.id = $('.tray-num input').val();
+
+			$('.ingredient').each(function(index,element) {
+				console.log(element);
+				
+				for(var i in tray) {
+
+					if(i !== 'name' && i !== 'id' && i !== 'weight') {
+						console.log(i + " " + $(element).attr('data-' + i));
+						tray[i] += parseFloat($(element).attr('data-' + i));
+					}
+				}
+				if(!isNaN(parseFloat($(element).find('.ingredient-input').val()))) {
+					console.log($(element).find('.ingredient-input').val());
+					tray.weight += parseFloat($(element).find('.ingredient-input').val());
+				}
+			});
+			console.log('post');
+			console.log(tray);
+			$.ajax({
+			  type: "POST",
+			  url: '/api/post/beacon/' + tray.id +'/' + JSON.stringify(tray),
+			  success: function(data,status){
+					console.log(data);
+				},
+			  dataType: 'JSON'
+			});
+
+			$('.ingredient').remove();
+			$('.tray-name input').val('name your tray');
+			$('.tray-num input').val('which tray?');
+
 		});
 	});
 

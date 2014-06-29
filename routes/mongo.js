@@ -29,7 +29,7 @@ exports.addTrayToBeacon = function(params, callback) {
 
 exports.getTrayFromBeacon= function(beaconID, callback) {
 	var beacons = db.collection('beacons');
-
+	console.log(beaconID);
 	beacons.findOne(beaconID, function(err, result) {
 		if(err){
 			console.error(err);
