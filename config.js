@@ -1,0 +1,1 @@
+exports.db = "mongodb://admin:giraffe@kahana.mongohq.com:10075/pileup";
